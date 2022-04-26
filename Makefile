@@ -25,7 +25,7 @@ test: build
 
 .PHONY: publish
 publish: build
-	$(COMPOSE_RUN) dotnet publish -o Publish /p:GenerateRuntimeConfigurationFiles=true
+	$(COMPOSE_RUN) dotnet publish -o Publish
 
 .PHONY: zip
 zip: publish
