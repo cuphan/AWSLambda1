@@ -1,0 +1,6 @@
+agents:
+  queue: "default"
+
+steps:
+  - label: "Build and upload to S3"
+    command: make upload
