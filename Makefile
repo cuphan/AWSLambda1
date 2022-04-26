@@ -21,7 +21,7 @@ build: clean
 
 .PHONY: test
 test: build
-	$(COMPOSE_RUN) dotnet test AwsTest.Tests/AwsTest.Tests.csproj
+	$(COMPOSE_RUN) dotnet test AWSLambda1.Tests/AWSLambda1.Tests.csproj
 
 .PHONY: publish
 publish: build

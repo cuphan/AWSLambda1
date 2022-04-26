@@ -6,17 +6,17 @@ services:
     image: mcr.microsoft.com/dotnet/sdk:3.1-alpine
     volumes:
       - ./:/app
-    working_dir: /app/AwsTest
+    working_dir: /app/AWSLambda1
   
   zip:
     build: .
     volumes:
       - ./:/app
-    working_dir: /app/AwsTest
+    working_dir: /app/AWSLambda1
   
   aws:
     image: amazon/aws-cli
     volumes:
       - ./:/app
       - ~/.aws:/root/.aws
-    working_dir: /app/AwsTest
+    working_dir: /app/AWSLambda1
