@@ -25,7 +25,7 @@ test: build
 
 .PHONY: publish
 publish: build
-	$(COMPOSE_RUN) dotnet publish --framework net6.0 -o Publish
+	$(COMPOSE_RUN) dotnet publish -o Publish /p:GenerateRuntimeConfigurationFiles=true
 
 .PHONY: zip
 zip: publish
