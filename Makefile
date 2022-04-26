@@ -7,16 +7,16 @@ ZIP_COMPOSE_RUN = docker-compose run --rm zip
 shell:
 	$(COMPOSE_RUN) sh
 
-.PHONY: restore
-restore:
-	$(COMPOSE_RUN) dotnet restore
+# .PHONY: restore
+# restore:
+# 	$(COMPOSE_RUN) dotnet restore
 
-.PHONY: clean
-clean: restore
-	$(COMPOSE_RUN) dotnet clean	
+# .PHONY: clean
+# clean: restore
+# 	$(COMPOSE_RUN) dotnet clean	
 
 .PHONY: build
-build: clean
+build:
 	$(COMPOSE_RUN) dotnet build -c Release
 
 .PHONY: test
